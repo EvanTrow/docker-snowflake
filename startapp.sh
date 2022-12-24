@@ -1,5 +1,5 @@
 #!/bin/sh
 
-export HOME=/config
+HOME="/config"
 
-exec /usr/bin/snowflake
+_JAVA_OPTIONS="-Duser.home=${HOME}"  exec /usr/bin/java -jar /defaults/snowflake.jar
